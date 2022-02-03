@@ -1,0 +1,140 @@
+.sendMessageFormWrapper {
+    background: #1b1b1f;
+    padding: 24px;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+}
+
+.signOutButton {
+    background: transparent;
+    border: 0;
+    color: #c4c4cc;
+
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
+.userInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .userImage {
+        padding: 3px;
+        background: linear-gradient(100deg, #ff008e, #ffcd1e 100%);
+        border-radius: 50%;
+        line-height: 0;
+
+        img {
+            height: 94px;
+            width: 94px;
+            border-radius: 50%;
+            background-color: #121214;
+            padding: 6px;
+        }
+    }
+
+    .userName {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 16px;
+    }
+
+    .userGithub {
+        display: flex;
+        align-items: center;
+
+        margin-top: 8px;
+        color: #c4c4cc;
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+}
+
+.sendMessageForm {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin-top: 48px;
+
+    background-color: #202024;
+
+    label {
+        padding: 18px 24px;
+        font-size: 20px;
+        background-color: #29292e;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    textarea {
+        background: transparent;
+        border: 0;
+        padding: 24px;
+        resize: none;
+        height: 160px;
+        color: #e1e1e6;
+        font-size: 16px;
+        line-height: 24px;
+        
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #8d8d99;
+        }
+    }
+
+    button {
+        align-self: flex-end;
+        background: #ff008e;
+        margin: 24px;
+        height: 40px;
+        color: #fff;
+        padding: 0 32px;
+        border: 0;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
+
+.sentMessage {
+    display: flex;
+    align-items: center;
+    
+    background: #1B873F;
+    padding: 0 24px;
+    height: 58px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+
+    position: fixed;
+    top: 24px;
+    right: 24px;
+
+    z-index: 1;
+}

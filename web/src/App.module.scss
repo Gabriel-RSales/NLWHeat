@@ -1,0 +1,39 @@
+.contentWapper {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 453px;
+    column-gap: 120px;
+    position: relative;
+
+    .seal {
+        position: absolute;
+        top: 125px;
+        right: 270px;
+    }
+}
+
+.contentSigned {
+    position: relative;
+
+    .seal {
+        z-index: 1;
+        top: 52px;
+        right: 40px;
+    }
+
+    &::before {
+        content: '';
+        height: 100vh;
+        width: 420px;
+    
+        background: url('./assets/background.svg');
+        background-size: cover;
+    
+        position: fixed;
+        left: 75vw;
+        top: 0;
+    }
+}
