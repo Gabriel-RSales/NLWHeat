@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "startServer": "ts-node-dev --exit-child src/server.ts"
+    "startServer": "ts-node-dev --exit-child src/server.ts",
+    "start": "vercel dev",
+    "deploy" : "vercel deploy --prod"
   },
   "dependencies": {
     "@prisma/client": "^3.7.0",
