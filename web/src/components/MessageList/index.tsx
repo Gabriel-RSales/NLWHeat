@@ -15,7 +15,7 @@ interface IMessage{
 
 const messageQueue: IMessage[] = [];
 
-const socket = io('http://localhost:3636');
+const socket = io('https://nlwheat-backend.herokuapp.com/');
 
 socket.on('new_message', newMessage => {
     messageQueue.push(newMessage);
