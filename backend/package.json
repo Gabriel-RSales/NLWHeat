@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "startServer": "ts-node-dev --exit-child src/server.ts",
-    "start": "vercel dev",
-    "deploy" : "vercel deploy --prod"
+    "postinstall": "yarn prisma migrate dev && tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@prisma/client": "^3.7.0",

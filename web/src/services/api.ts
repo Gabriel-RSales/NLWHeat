@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'http://localhost:3636',
+    baseURL: 'https://nlwheat-backend.herokuapp.com/',
 });
