@@ -1,34 +1,29 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-datasource db {
-  provider = "postgres"
-  url      = env("DATABASE_URL")
-}
-
 generator client {
   provider = "prisma-client-js"
 }
 
-model User{
-  id         String @id @default(uuid())
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String    @id @default(uuid())
   login      String
   github_id  Int
   avatar_url String
   name       String?
+  messages   Message[]
 
   @@map("users")
-  messages Message[]
 }
 
 model Message {
-  id  String @id @default(uuid())
-  text String
+  id         String   @id @default(uuid())
+  text       String
   created_at DateTime @default(now())
-
-  user_id String
-  
-  user User @relation(fields: [user_id], references: [id])
+  user_id    String
+  user       User     @relation(fields: [user_id], references: [id])
 
   @@map("messages")
 }
