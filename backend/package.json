@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "startServer": "ts-node-dev --exit-child src/server.ts",
-    "postinstall": "tsc",
+    "postinstall": "yarn prisma db push && tsc",
     "start": "node dist/server.js"
   },
   "dependencies": {
