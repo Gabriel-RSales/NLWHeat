@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "npm": "10.x",
     "yarn": "1.22.x"
   },
   "scripts": {
