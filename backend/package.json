@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "npm": "10.x",
+    "yarn": "1.22.x"
+  },
   "scripts": {
     "startServer": "ts-node-dev --exit-child src/server.ts",
     "postinstall": "yarn prisma db push && tsc",
