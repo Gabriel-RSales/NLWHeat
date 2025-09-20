@@ -33,7 +33,7 @@ interface IAuthResponse{
 export function AuthProvider(props: AuthProvider) {
     const [user, setUser] = useState<User | null>(null);
 
-    const signInUrl = 'import.meta.env.VITE_SIGNIN_URL';
+    const signInUrl = 'process.env.VITE_SIGNIN_URL';
 
     async function signIn(githubCode: string) {
         const response = await api.post<IAuthResponse>('auth', {
