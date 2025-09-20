@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "npm": "10.x"
+  },
   "scripts": {
     "startServer": "ts-node-dev --exit-child src/server.ts",
     "postinstall": "yarn prisma db push && tsc",
@@ -12,7 +15,7 @@
     "@prisma/client": "^3.7.0",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "dotenv": "^17.2.2",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "socket.io": "^4.4.0"
