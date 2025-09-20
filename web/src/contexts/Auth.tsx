@@ -33,7 +33,7 @@ interface IAuthResponse{
 export function AuthProvider(props: AuthProvider) {
     const [user, setUser] = useState<User | null>(null);
 
-    const signInUrl = 'https://github.com/login/oauth/authorize?client_id=d1a3d19b5cd41cd70954';
+    const signInUrl = 'import.meta.env.VITE_SIGNIN_URL';
 
     async function signIn(githubCode: string) {
         const response = await api.post<IAuthResponse>('auth', {

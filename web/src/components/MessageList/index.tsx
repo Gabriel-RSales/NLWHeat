@@ -15,7 +15,7 @@ interface IMessage{
 
 const messageQueue: IMessage[] = [];
 
-const socket = io('https://nlwheat-backend.herokuapp.com/');
+const socket = io('import.meta.env.API_URL');
 
 socket.on('new_message', newMessage => {
     messageQueue.push(newMessage);
